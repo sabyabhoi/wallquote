@@ -39,7 +39,7 @@ class ImageModifier:
         img.save(self.output_file)
 
     def get_random(self):
-        imgs = glob.glob(self.wallpaper_dir + '*.*')
+        imgs = glob.glob(self.wallpaper_dir + '*.png')
         self.input_file = random.choice(imgs)
 
     def set_bg(self):
