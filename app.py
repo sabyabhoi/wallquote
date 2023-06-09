@@ -36,7 +36,8 @@ class ImageModifier:
         fontObj = ImageFont.truetype(self.font, self.fontsize)
         draw.text((x + 5, y + 5), self.msg, (0, 0, 0), font=fontObj, anchor='mm')
         draw.text((x, y), self.msg, fill=(255, 255, 255), font=fontObj, anchor='mm')
-        img.save(self.output_file)
+        img = img.convert('RGB')
+        img.save('/tmp/' + self.output_file)
 
     def get_random(self):
         imgs = glob.glob(self.wallpaper_dir + '*.png')
@@ -45,10 +46,10 @@ class ImageModifier:
     def set_bg(self):
         self.get_random()
         self.exec_command()
-        cmd = f'feh --bg-scale {self.output_file}'
+        cmd = f'feh --bg-scale /tmp/{self.output_file}'
         os.system(cmd)
     
 if __name__ == '__main__':
     image_modifier = ImageModifier()
-    image_modifier.read_config_from_json('config.json')
+    image_modifier.read_config_from_json('/home/cognusboi/workspace/userfiles/programming/python/wallpaper/config.json')
     image_modifier.set_bg()

@@ -3,5 +3,5 @@
   "output_file": "output.jpg",
 	"font": "/usr/share/fonts/TTF/RobotoMono-Bold.ttf",
 	"fontsize": 40,
-	"msg_file": "quotes.txt"
+	"msg_file": "/home/cognusboi/workspace/userfiles/programming/python/wallpaper/quotes.txt"
 }
