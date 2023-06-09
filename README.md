@@ -3,15 +3,12 @@
 <p align="center">
     Add quotes to your wallpapers
     <br />
-    <a href="https://github.com/sabyabhoi/wallquote"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
 </p>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+![output](https://github.com/sabyabhoi/wallquote/assets/18750590/e012d8ef-234d-4bd3-a21e-4d5c897cdec5)
 
 Whenever I read any books, I faced a problem: I couldn't remember what I read after I finished the book. So I created this program to neatly place what I read onto my wallpapers.  
 
