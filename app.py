@@ -51,5 +51,5 @@ class ImageModifier:
     
 if __name__ == '__main__':
     image_modifier = ImageModifier()
-    image_modifier.read_config_from_json('/home/cognusboi/workspace/userfiles/programming/python/wallpaper/config.json')
+    image_modifier.read_config_from_json('/home/cognusboi/workspace/programming/python/wallpaper/config.json')
     image_modifier.set_bg()
