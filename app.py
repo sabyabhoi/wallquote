@@ -34,19 +34,21 @@ class ImageModifier:
         draw = ImageDraw.Draw(img)
         x, y = WIDTH//2, HEIGHT//2
         fontObj = ImageFont.truetype(self.font, self.fontsize)
-        draw.text((x + 5, y + 5), self.msg, (0, 0, 0), font=fontObj, anchor='mm')
+        draw.text((x + 3, y + 3), self.msg, fill=(0, 0, 0), font=fontObj, anchor='mm')
         draw.text((x, y), self.msg, fill=(255, 255, 255), font=fontObj, anchor='mm')
         img = img.convert('RGB')
         img.save('/tmp/' + self.output_file)
 
-    def get_random(self):
+    def get_random_img(self):
         imgs = glob.glob(self.wallpaper_dir + '*.png')
+        imgs.extend(glob.glob(self.wallpaper_dir + '*.jpg'))
+        imgs.extend(glob.glob(self.wallpaper_dir + '*.jpeg'))
         self.input_file = random.choice(imgs)
 
     def set_bg(self):
-        self.get_random()
+        self.get_random_img()
         self.exec_command()
-        cmd = f'feh --bg-scale /tmp/{self.output_file}'
+        cmd = f'DISPLAY=:0.0 feh --bg-scale /tmp/{self.output_file}'
         os.system(cmd)
     
 if __name__ == '__main__':

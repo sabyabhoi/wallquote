@@ -1,7 +1,7 @@
 {
   "wallpaper_dir": "/home/cognusboi/workspace/Media/Pictures/wallpapers/",
   "output_file": "output.jpg",
-	"font": "/usr/share/fonts/TTF/RobotoMonoNerdFont-Bold.ttf",
+	"font": "/home/cognusboi/workspace/programming/python/wallpaper/IosevkaNerdFontMono-BoldItalic.ttf",
 	"fontsize": 40,
 	"msg_file": "/home/cognusboi/workspace/programming/python/wallpaper/quotes.txt"
 }
