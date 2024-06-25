@@ -48,10 +48,10 @@ class ImageModifier:
     def set_bg(self):
         self.get_random_img()
         self.exec_command()
-        cmd = f'DISPLAY=:0.0 feh --bg-scale /tmp/{self.output_file}'
-        os.system(cmd)
+        # cmd = f'swww img /tmp/{self.output_file} --transition-type=wipe'
+        # os.system(cmd)
     
 if __name__ == '__main__':
     image_modifier = ImageModifier()
-    image_modifier.read_config_from_json('/home/cognusboi/workspace/programming/python/wallpaper/config.json')
+    image_modifier.read_config_from_json('/home/cognusboi/programming/python/wallquote/config.json')
     image_modifier.set_bg()
