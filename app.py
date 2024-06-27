@@ -27,7 +27,7 @@ class ImageModifier:
                 raise FileNotFoundError(f"{f} not found")
 
         chosen = random.choice(list(open(self.msg_file)))
-        self.msg = '\n'.join(textwrap.wrap(chosen, width=40))
+        self.msg = '\n'.join([line.center(40) for line in textwrap.wrap(chosen, width=40)])
 
         WIDTH, HEIGHT = 1920, 1080
         img = Image.open(self.input_file).resize((WIDTH, HEIGHT))
