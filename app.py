@@ -42,7 +42,8 @@ class ImageModifier:
     def get_random_img(self):
         imgs = glob.glob(self.wallpaper_dir + '*.png')
         imgs.extend(glob.glob(self.wallpaper_dir + '*.jpg'))
-        imgs.extend(glob.glob(self.wallpaper_dir + '*.jpeg'))
+        # imgs.extend(glob.glob(self.wallpaper_dir + '*.jpeg'))
+        # imgs.extend(glob.glob(self.wallpaper_dir + '*.webp'))
         self.input_file = random.choice(imgs)
 
     def set_bg(self):
